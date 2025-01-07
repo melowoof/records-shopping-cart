@@ -4,7 +4,7 @@ Simple overview / note about project.
 
 ## [Demo](link)
 
-[RECORDS_Preview.mp4](RECORDS_Preview.mp4)
+[RECORDS_Preview.gif](RECORDS_Preview.gif)
 
 ## Features
 
