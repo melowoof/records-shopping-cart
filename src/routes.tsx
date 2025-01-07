@@ -1,4 +1,3 @@
-import React from "react";
 import App from "./App";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Homepage from "./components/Homepage/Homepage";

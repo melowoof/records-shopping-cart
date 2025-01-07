@@ -38,8 +38,12 @@ function toAlbumsArray(json: any): AlbumObject[] {
 
 function useAccessToken() {
   const url = "https://accounts.spotify.com/api/token";
-  const clientId = "6d4c250218ad4626b72ab6234422e93c";
-  const clientSecret = "1557f83530e541c88f556432a9a0dcfd";
+  const clientId = process.env.REACT_APP_CLIENT_ID;
+  const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
+
+  if (!clientId || !clientSecret) {
+    throw new Error("Missing client ID or client secret");
+  }
 
   return useQuery({
     queryKey: ["accessToken"],
