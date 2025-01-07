@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import { NavLink } from "react-router";
-// import useCart from "../../utils/CartContext";
+import { ShoppingCart } from "lucide-react";
 
 interface NavBarProps {
   cartSize: number;
@@ -27,6 +27,8 @@ function NavBar({ cartSize }: NavBarProps) {
         >
           <p>ABOUT</p>
         </NavLink> */}
+      </div>
+      <div className={`${styles.nav} ${styles.navRight}`}>
         <NavLink
           className={({ isActive }) =>
             `${styles.navLink} ${isActive && styles.selected}`
@@ -34,16 +36,14 @@ function NavBar({ cartSize }: NavBarProps) {
           to={"/store"}
         >
           <p>STORE</p>
-        </NavLink>
-      </div>
-      <div className={`${styles.nav} ${styles.navRight}`}>
-        {" "}
+        </NavLink>{" "}
         <NavLink
           className={({ isActive }) =>
             `${styles.navLink} ${isActive && styles.selected}`
           }
           to={"/cart"}
         >
+          <ShoppingCart />
           <p>CART ({cartSize})</p>
         </NavLink>
       </div>

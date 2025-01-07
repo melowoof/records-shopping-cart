@@ -47,7 +47,8 @@
   display: flex;
   position: fixed;
   right: 0;
-  top: calc(var(--desktop-grid-size) * 7);
+  bottom: 0;
+  /* top: calc(var(--desktop-grid-size) * 7); */
   width: calc(var(--desktop-grid-size) * 2);
   height: var(--desktop-grid-size);
   margin-left: auto;
@@ -80,7 +81,7 @@
     gap: var(--tablet-grid-size);
   }
   .navLinkContainer {
-    top: calc(var(--tablet-grid-size) * 6);
+    /* top: calc((var(--tablet-grid-size) * 6)); */
     width: calc(var(--tablet-grid-size) * 2);
     height: var(--tablet-grid-size);
   }
