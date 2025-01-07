@@ -4,7 +4,7 @@ Simple overview / note about project.
 
 ## [Demo](link)
 
-[RECORDS_Preview.gif](RECORDS_Preview.gif)
+![alt text](RECORDS_Preview.gif)
 
 ## Features
 
@@ -33,4 +33,5 @@ It could really, really, really do with a search button. The API is there. I wil
 ## Acknowledgements
 
 A great deal of inspiration was taken from [this website](https://www.awwwards.com/inspiration/desktop-self-discipline-1)
-[Spotify API](https://developer.spotify.com/documentation/web-api)
+
+Also the [Spotify API](https://developer.spotify.com/documentation/web-api) for all data used.
