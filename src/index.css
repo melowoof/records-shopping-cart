@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("./assets/fonts/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Nunito-Italic";
+  src: url("./assets/fonts/Nunito-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "AnonymousPro-Regular";
+  src: url("./assets/fonts/AnonymousPro-Regular.ttf");
+}
+@font-face {
+  font-family: "AnonymousPro-Bold";
+  src: url("./assets/fonts/AnonymousPro-Bold.ttf");
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("./assets/fonts/SourceSerif4-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Source Serif 4 Italic";
+  src: url("./assets/fonts/SourceSerif4-Italic-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Diphylleia";
+  src: url("./assets/fonts/Diphylleia-Regular.ttf");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Fraunces Italic";
+  src: url("./assets/fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+:root {
+  --desktop-grid-size: 6.66vw;
+  --tablet-grid-size: 8.33vw;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #dcdad4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  width: 100%;
+  opacity: 1;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgb(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: var(--desktop-grid-size) var(--desktop-grid-size);
+  background-attachment: fixed;
+}
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  /* background-color: red; */
+  /* place-items: center; */
+  /* padding: 15px; */
+}
+.loading {
+  animation: loading 5s linear infinite;
+  background-image: linear-gradient(
+    to right,
+    rgba(140, 140, 140, 0.5) 0%,
+    rgba(140, 140, 140, 0.2) 15%,
+    rgba(140, 140, 140, 0.5) 30%
+  );
+  background-size: 1200px 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.button {
+  color: black;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  outline: 2px solid black;
+  cursor: pointer;
+  text-wrap: nowrap;
+  font-family: "AnonymousPro-Bold";
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  letter-spacing: -1px;
+  max-height: 3em;
+}
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transform-origin: bottom;
+}
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transform-origin: top;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@media (max-width: 1200px) {
+  #root {
+    background-size: var(--tablet-grid-size) var(--tablet-grid-size);
+  }
+}

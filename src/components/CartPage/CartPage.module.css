@@ -1,0 +1,107 @@
+.cartPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartDisplay {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--desktop-grid-size);
+  padding-top: var(--desktop-grid-size);
+  padding-bottom: calc(var(--desktop-grid-size) * 2);
+  margin: 0 calc(var(--desktop-grid-size) * 2);
+}
+.albumContainer {
+  height: calc(var(--desktop-grid-size) * 2);
+  /* width: calc(var(--desktop-grid-size) * 5); */
+  /* background-color: red; */
+  display: flex;
+  border-bottom: 2px solid black;
+}
+.infoContainer {
+  /* outline: 1px solid black; */
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "AnonymousPro-Bold";
+}
+.albumHeader {
+  color: black;
+  flex-grow: 1;
+}
+.albumName {
+  background-color: black;
+  color: white;
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+  width: fit-content;
+  padding: 0 5px;
+}
+.artistName {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+}
+.purchaseInfo {
+  flex-grow: 1;
+  color: black;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.amount {
+  display: flex;
+  /* background-color: red; */
+  width: fit-content;
+  align-items: center;
+  gap: 30px;
+}
+.removeButton {
+  background-color: transparent;
+  /* border: 2px solid rgb(128, 128, 128, 0.5); */
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.removeButton:hover {
+  outline: 2px solid rgb(128, 128, 128, 0.5);
+}
+.albumPrice {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.albumArt {
+  width: calc(var(--desktop-grid-size) * 2);
+  height: calc(var(--desktop-grid-size) * 2);
+  border-radius: 2px;
+}
+.navContainer {
+  color: black;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+.total,
+.totalPrice {
+  font-family: "AnonymousPro-Bold";
+  letter-spacing: -5px;
+}
+.total {
+  font-size: 6rem;
+  scale: 0.6 1;
+}
+.totalPrice {
+  font-size: 3rem;
+}

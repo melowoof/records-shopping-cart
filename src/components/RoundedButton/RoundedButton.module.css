@@ -1,0 +1,7 @@
+.button {
+  composes: button from global;
+  background-color: #d0ff5d;
+}
+.button:hover {
+  cursor: pointer;
+}

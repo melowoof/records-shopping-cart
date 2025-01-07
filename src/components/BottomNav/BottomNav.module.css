@@ -1,0 +1,25 @@
+.bottomNav {
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 1;
+  pointer-events: none;
+}
+.bottomNav * {
+  pointer-events: all;
+}
+.navBg {
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  mask: linear-gradient(to top, black, transparent 4rem);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
