@@ -1,9 +1,9 @@
-import { DetailedAlbumObject } from "./interfaces";
+import { AlbumObject } from "./interfaces";
 
 const cart = new Map();
 
 export function addToCart(
-  itemObject: DetailedAlbumObject,
+  itemObject: AlbumObject,
   itemId: string,
   amount: number
 ) {
@@ -57,7 +57,7 @@ export function getCart() {
   return cart;
 }
 
-export function getItem(itemId: string): DetailedAlbumObject | null {
+export function getItem(itemId: string): AlbumObject | null {
   if (cart.has(itemId)) {
     const item = cart.get(itemId);
     return item;

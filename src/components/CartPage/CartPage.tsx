@@ -9,11 +9,13 @@ import {
   decreaseAmount,
   getItemCount,
   getTotalPrice,
+  getCartSize,
 } from "../../utils/cart";
 import { useState } from "react";
 import AmountInput from "../AmountInput/AmountInput";
 import { motion } from "motion/react";
 import { Trash2 } from "lucide-react";
+import { useOutletContext } from "react-router";
 
 interface AlbumProps {
   albumId: string;
@@ -46,7 +48,7 @@ function Album({ albumId, updateCartUI }: AlbumProps) {
   return (
     <div className={styles.albumContainer}>
       <img
-        src={album.albumArt}
+        src={album.albumArtMed}
         alt={album.albumName}
         className={styles.albumArt}
       />
@@ -77,12 +79,16 @@ function Album({ albumId, updateCartUI }: AlbumProps) {
 }
 
 function CartPage() {
+  const { setCartSize } = useOutletContext<{
+    setCartSize: (size: number) => void;
+  }>();
   const [cart, setCart] = useState(getCart());
   const [totalPrice, setTotalPrice] = useState(getTotalPrice());
 
   function updateCartUI() {
     setCart(getCart());
     setTotalPrice(getTotalPrice());
+    setCartSize(getCartSize());
   }
 
   return (

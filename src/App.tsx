@@ -4,7 +4,7 @@ import { Outlet } from "react-router";
 import NavBar from "./components/NavBar/NavBar";
 import { addToCart, getCartSize } from "./utils/cart";
 import { useState } from "react";
-import { DetailedAlbumObject } from "./utils/interfaces";
+import { AlbumObject } from "./utils/interfaces";
 
 const queryClient = new QueryClient();
 
@@ -12,7 +12,7 @@ function App() {
   const [cartSize, setCartSize] = useState(getCartSize());
 
   function handleAddToCart(
-    itemObject: DetailedAlbumObject,
+    itemObject: AlbumObject,
     itemId: string,
     amount: number
   ) {
@@ -27,6 +27,7 @@ function App() {
         <Outlet
           context={{
             handleAddToCart: handleAddToCart,
+            setCartSize: setCartSize,
           }}
         />
       </QueryClientProvider>
