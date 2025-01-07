@@ -54,8 +54,13 @@ function Homepage() {
           }}
           className={styles.fluffText}
         >
-          PART OF THE ODIN PROJECT CURRICULUM. NOT AFFILIATED WITH SPOTIFY® IN
-          ANY TANGIBLE WAY OR WHATSOEVER. ALSO USES THE SPOTIFY® API.
+          PART OF THE ODIN PROJECT CURRICULUM.{" "}
+          <a href="https://github.com/melowoof/records-shopping-cart">
+            GITHUB REPOSITORY
+          </a>
+          . NOT AFFILIATED WITH SPOTIFY® IN ANY TANGIBLE WAY OR WHATSOEVER. USES
+          THE SPOTIFY®{" "}
+          <a href="https://developer.spotify.com/documentation/web-api">API</a>.
         </motion.p>
       </div>
     </div>

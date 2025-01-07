@@ -3,6 +3,10 @@
   height: 100%;
   display: flex;
 }
+a {
+  font-size: inherit;
+  text-decoration: none;
+}
 .leftSide {
   position: relative;
   padding: 15px;
