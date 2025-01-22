@@ -1,7 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { AlbumObject, DetailedAlbumObject, Track } from "./interfaces";
+import { AlbumObject, Track } from "./interfaces";
+import { AlbumJsonType } from "./albumJsonType";
+import { NewReleasesType } from "./newReleasesType";
+import { AlbumTracksType } from "./albumTracksType";
 
-function toAlbumObject(json: any): DetailedAlbumObject {
+function toAlbumObject(json: AlbumJsonType) {
   const albumObject = {
     albumName: json.name,
     albumId: json.id,
@@ -15,7 +18,7 @@ function toAlbumObject(json: any): DetailedAlbumObject {
   return albumObject;
 }
 
-function toAlbumsArray(json: any): AlbumObject[] {
+function toAlbumsArray(json: NewReleasesType) {
   const items = json.albums.items;
   const albumsArray: AlbumObject[] = [];
   items.forEach((album) => {
@@ -110,7 +113,7 @@ export function useFetchAlbum(albumId: string) {
   });
 }
 
-function toTracksArray(json: any): Track[] {
+function toTracksArray(json: AlbumTracksType) {
   const items = json.items;
   const tracksArray: Track[] = [];
   items.forEach((track) => {

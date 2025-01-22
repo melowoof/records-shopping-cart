@@ -29,6 +29,7 @@
     linear-gradient(to right, rgb(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 6.66vw 6.66vw;
   background-attachment: fixed;
+  
 }
 .containerBg {
   border-radius: 2px;
