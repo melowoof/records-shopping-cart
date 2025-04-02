@@ -2,7 +2,7 @@
 
 Simple overview / note about project.
 
-## [Demo](link)
+## [Demo](https://records-shopping-cart.pages.dev/)
 
 ![alt text](RECORDS_Preview.gif)
 
